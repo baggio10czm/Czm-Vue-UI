@@ -1,27 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <c-button>按钮</c-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import CButton from './components/cButton/cButton'
 export default {
   name: 'app',
+  data () {
+    return {
+
+    }
+  },
   components: {
-    HelloWorld
+    CButton
   }
 }
 </script>
 
 <style lang="stylus">
 #app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
+  color $color-text
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
 </style>
