@@ -39,11 +39,12 @@ export default {
       transform rotate(360deg)
 
   .c-button
+    color #333
     font-size: $font-size-medium
     height $button-height
     padding 0 1em
-    border-radius $button-border-radius
-    border 1px solid $button-border-color
+    border-radius border-radius
+    border 1px solid $border-color
     background-color #fff
     display inline-flex
     justify-content center
@@ -55,9 +56,9 @@ export default {
       order 1
       margin-right 5px
     &:hover
-      border-color $button-border-active-color
+      border-color $el-active-color
     &:active
-      border-color $button-active-color
+      border-color $el-active-color
     &:focus
       outline none
     &.icon-right
