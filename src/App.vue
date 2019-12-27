@@ -16,8 +16,8 @@
       </button-group>
     </div>
     <div class="input">
-      <c-input :value="inputValue"></c-input>
-      <c-input :value="inputValue" @change="inputChange"></c-input>
+      <c-input v-model="inputValue"></c-input>
+      <c-input v-model="inputValue" @input="inputChange"></c-input>
       <c-input value="disable" disable></c-input>
       <c-input value="readonly" readonly></c-input>
       <c-input value="error" error="用户名错误"></c-input>
