@@ -40,9 +40,16 @@
 
       <row gutter="20">
         <column span="3"><div class="content">LOVE</div></column>
-        <column span="3" offset="7"><div class="content">HOPE</div></column>
+        <column span="3" offset="1"><div class="content">HOPE</div></column>
         <column span="3" offset="8"><div class="content">FAITH</div></column>
       </row>
+
+      <row gutter="20" align="center">
+        <column span="3"><div class="content">LOVE</div></column>
+        <column span="3"><div class="content">HOPE</div></column>
+        <column span="3"><div class="content">FAITH</div></column>
+      </row>
+
     </div>
   </div>
 </template>

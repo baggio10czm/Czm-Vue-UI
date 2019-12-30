@@ -1,6 +1,7 @@
 <template>
-    <div class="column" :class="columnClass"
-        :style="columnStyle"
+    <div class="column"
+         :class="columnClass"
+         :style="columnStyle"
     >
       <slot></slot>
     </div>
@@ -37,10 +38,10 @@ export default {
 <style lang="stylus">
   .column
     width: 100%
-  for $num in 1...25
-    $percent =($num / 24 * 100)%
-    &.col-{$num}
-      width $percent
-    &.offset-{$num}
-      margin-left $percent
+    for $num in 1..24
+      $percent =($num / 24 * 100)%
+      &.col-{$num}
+        width $percent
+      &.offset-{$num}
+        margin-left $percent
 </style>
