@@ -38,6 +38,7 @@ export default {
 <style lang="stylus" scoped>
   .row
     display: flex
+    flex-flow wrap
     &.align-left
       justify-content flex-start
     &.align-right

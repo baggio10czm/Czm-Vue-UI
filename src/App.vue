@@ -28,7 +28,10 @@
     <div class="layout">
       <row gutter="20">
         <column span="12"><div class="content">Czm</div></column>
-        <column span="12"><div class="content">Czm</div></column>
+        <column span="12"><div class="content">Cmx</div></column>
+        <column span="12"><div class="content">Yyy</div></column>
+        <column span="3"><div class="content">Cjq</div></column>
+        <column span="2" offset="7"><div class="content">=7=</div></column>
       </row>
 
       <row gutter="20">
@@ -45,9 +48,9 @@
       </row>
 
       <row gutter="20" align="center">
-        <column span="3"><div class="content">LOVE</div></column>
-        <column span="3"><div class="content">HOPE</div></column>
-        <column span="3"><div class="content">FAITH</div></column>
+        <column span="3" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 3, offset: 1 }"><div class="content">LOVE</div></column>
+        <column span="3" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 3, offset: 1 }"><div class="content">HOPE</div></column>
+        <column span="3" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 3, offset: 1 }"><div class="content">FAITH</div></column>
       </row>
 
     </div>
@@ -74,6 +77,9 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import "~@/stylus/reset"
+  body
+    margin: 0
   #app
     padding 20px
     color $color-text
