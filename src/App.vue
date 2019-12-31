@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2>button</h2>
     <!--  button  button-group 组件  -->
     <div class="button">
       <c-button>按钮</c-button>
@@ -17,6 +18,7 @@
       </button-group>
     </div>
     <!--   input 组件  -->
+    <h2>input</h2>
     <div class="input">
       <c-input v-model="inputValue"></c-input>
       <c-input v-model="inputValue" @change="inputChange"></c-input>
@@ -25,6 +27,7 @@
       <c-input value="error" error="用户名错误"></c-input>
     </div>
     <!--  布局row col 组件  -->
+    <h2>Grid</h2>
     <div class="Grid">
       <row gutter="20">
         <column span="12">
@@ -84,7 +87,8 @@
       </row>
     </div>
 
-    <c-layout style="height: 700px">
+    <h2>Layout</h2>
+    <c-layout style="height: 500px">
       <c-header class="demo">
         <div>Header</div>
       </c-header>
@@ -96,7 +100,7 @@
       </c-footer>
     </c-layout>
 
-    <c-layout style="height: 700px; margin-top: 100px;">
+    <c-layout style="height: 600px; margin-top: 100px;">
       <c-header class="demo">
         <div>Header</div>
       </c-header>
@@ -111,7 +115,7 @@
       </c-footer>
     </c-layout>
 
-    <c-layout style="height: 700px; margin-top: 100px;">
+    <c-layout style="height: 600px; margin-top: 100px;">
       <c-sider class="demo">Sider</c-sider>
       <c-layout>
         <c-header class="demo">
@@ -149,6 +153,7 @@ export default {
 
 <style lang="stylus">
   @import "~@/stylus/reset"
+  @import "~@/stylus/variable"
   body
     margin: 0
 
@@ -157,6 +162,12 @@ export default {
     color $color-text
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
+
+    h2
+      font-size: $font-size-large-x
+      font-weight: bold
+      border-bottom: 1px dashed #ccc
+      margin-bottom: 20px
 
     .button, .input
       display: flex
@@ -179,4 +190,6 @@ export default {
     .demo
       min-height: 100px
       border: 1px solid #ccc
+    .sider
+      width: 200px
 </style>
