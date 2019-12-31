@@ -88,7 +88,7 @@
     </div>
 
     <h2>Layout</h2>
-    <c-layout style="height: 500px">
+    <c-layout style="height: 400px">
       <c-header class="demo">
         <div>Header</div>
       </c-header>
@@ -100,7 +100,7 @@
       </c-footer>
     </c-layout>
 
-    <c-layout style="height: 600px; margin-top: 100px;">
+    <c-layout style="height: 500px; margin-top: 100px;">
       <c-header class="demo">
         <div>Header</div>
       </c-header>
@@ -115,7 +115,7 @@
       </c-footer>
     </c-layout>
 
-    <c-layout style="height: 600px; margin-top: 100px;">
+    <c-layout style="height: 500px; margin-top: 100px;">
       <c-sider class="demo">Sider</c-sider>
       <c-layout>
         <c-header class="demo">

@@ -15,8 +15,6 @@ export default {
     }
   },
   mounted () {
-    console.log(this.$children
-    )
     this.$children.forEach(vm => {
       // 如果有 sider 组件就加一个class 标记
       if (vm.$options.name === 'cSider') {
@@ -31,7 +29,6 @@ export default {
 .layout
   flex-grow 1
   display: flex;
-  height 100%
   flex-direction column
   &.hasSider
     flex-direction row
