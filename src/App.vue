@@ -16,7 +16,7 @@
         <c-button icon="right" icon-position="right">下一页</c-button>
       </button-group>
     </div>
-  <!--   input 组件  -->
+    <!--   input 组件  -->
     <div class="input">
       <c-input v-model="inputValue"></c-input>
       <c-input v-model="inputValue" @change="inputChange"></c-input>
@@ -25,35 +25,106 @@
       <c-input value="error" error="用户名错误"></c-input>
     </div>
     <!--  布局row col 组件  -->
-    <div class="layout">
+    <div class="Grid">
       <row gutter="20">
-        <column span="12"><div class="content">Czm</div></column>
-        <column span="12"><div class="content">Cmx</div></column>
-        <column span="12"><div class="content">Yyy</div></column>
-        <column span="3"><div class="content">Cjq</div></column>
-        <column span="2" offset="7"><div class="content">=7=</div></column>
+        <column span="12">
+          <div class="content">Czm</div>
+        </column>
+        <column span="12">
+          <div class="content">Cmx</div>
+        </column>
+        <column span="12">
+          <div class="content">Yyy</div>
+        </column>
+        <column span="3">
+          <div class="content">Cjq</div>
+        </column>
+        <column span="2" offset="7">
+          <div class="content">=7=</div>
+        </column>
       </row>
 
       <row gutter="20">
-        <column span="4"><div class="content">YYY</div></column>
-        <column span="8"><div class="content">YYY</div></column>
-        <column span="5"><div class="content">CMX</div></column>
-        <column span="4"><div class="content">CJQ</div></column>
+        <column span="4">
+          <div class="content">YYY</div>
+        </column>
+        <column span="8">
+          <div class="content">YYY</div>
+        </column>
+        <column span="5">
+          <div class="content">CMX</div>
+        </column>
+        <column span="4">
+          <div class="content">CJQ</div>
+        </column>
       </row>
 
       <row gutter="20">
-        <column span="3"><div class="content">LOVE</div></column>
-        <column span="3" offset="1"><div class="content">HOPE</div></column>
-        <column span="3" offset="8"><div class="content">FAITH</div></column>
+        <column span="3">
+          <div class="content">LOVE</div>
+        </column>
+        <column span="3" offset="1">
+          <div class="content">HOPE</div>
+        </column>
+        <column span="3" offset="8">
+          <div class="content">FAITH</div>
+        </column>
       </row>
 
       <row gutter="20" align="center">
-        <column span="3" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 3, offset: 1 }"><div class="content">LOVE</div></column>
-        <column span="3" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 3, offset: 1 }"><div class="content">HOPE</div></column>
-        <column span="3" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 3, offset: 1 }"><div class="content">FAITH</div></column>
+        <column span="3" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 3, offset: 1 }">
+          <div class="content">LOVE</div>
+        </column>
+        <column span="3" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 3, offset: 1 }">
+          <div class="content">HOPE</div>
+        </column>
+        <column span="3" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 3, offset: 1 }">
+          <div class="content">FAITH</div>
+        </column>
       </row>
-
     </div>
+
+    <c-layout style="height: 700px">
+      <c-header class="demo">
+        <div>Header</div>
+      </c-header>
+      <c-content class="demo">
+        <div>Content</div>
+      </c-content>
+      <c-footer class="demo">
+        <div>Footer</div>
+      </c-footer>
+    </c-layout>
+
+    <c-layout style="height: 700px; margin-top: 100px;">
+      <c-header class="demo">
+        <div>Header</div>
+      </c-header>
+      <c-layout>
+        <c-content class="demo">
+          <div>Content</div>
+        </c-content>
+        <c-sider class="demo">Sider</c-sider>
+      </c-layout>
+      <c-footer class="demo">
+        <div>Footer</div>
+      </c-footer>
+    </c-layout>
+
+    <c-layout style="height: 700px; margin-top: 100px;">
+      <c-sider class="demo">Sider</c-sider>
+      <c-layout>
+        <c-header class="demo">
+          <div>Header</div>
+        </c-header>
+        <c-content class="demo">
+          <div>Content</div>
+        </c-content>
+        <c-footer class="demo">
+          <div>Footer</div>
+        </c-footer>
+      </c-layout>
+    </c-layout>
   </div>
 </template>
 
@@ -80,13 +151,14 @@ export default {
   @import "~@/stylus/reset"
   body
     margin: 0
+
   #app
     padding 20px
     color $color-text
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
 
-    .button,.input
+    .button, .input
       display: flex
       margin-bottom: 20px
       padding: 20px
@@ -95,11 +167,16 @@ export default {
 
       > button
         margin-right: 20px
-    .input > div
-        margin-right 20px
 
-    .layout
+    .input > div
+      margin-right 20px
+
+    .Grid
       .content
         height: 100px
         border: 1px solid yellowgreen
+
+    .demo
+      min-height: 100px
+      border: 1px solid #ccc
 </style>
