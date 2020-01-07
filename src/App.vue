@@ -20,11 +20,11 @@
     <!--   input 组件  -->
     <h2>input</h2>
     <div class="input">
-      <c-input v-model="inputValue"></c-input>
-      <c-input v-model="inputValue" @change="inputChange"></c-input>
-      <c-input value="disable" disable></c-input>
-      <c-input value="readonly" readonly></c-input>
-      <c-input value="error" error="用户名错误"></c-input>
+      <c-input v-model="inputValue"/>
+      <c-input v-model="inputValue" @change="inputChange"/>
+      <c-input value="disable" disable/>
+      <c-input value="readonly" readonly/>
+      <c-input value="error" error="用户名错误"/>
     </div>
     <!--  布局row col 组件  -->
     <h2>Grid</h2>
@@ -100,7 +100,7 @@
       </c-footer>
     </c-layout>
 
-    <c-layout style="height: 500px; margin-top: 100px;">
+    <c-layout style="height: 420px; margin-top: 100px;">
       <c-header class="demo">
         <div>Header</div>
       </c-header>
@@ -115,7 +115,7 @@
       </c-footer>
     </c-layout>
 
-    <c-layout style="height: 500px; margin-top: 100px;">
+    <c-layout style="height: 420px; margin-top: 100px;">
       <c-sider class="demo">Sider</c-sider>
       <c-layout>
         <c-header class="demo">
@@ -129,6 +129,9 @@
         </c-footer>
       </c-layout>
     </c-layout>
+
+    <h2>Toast</h2>
+
   </div>
 </template>
 
@@ -167,6 +170,7 @@ export default {
       font-size: $font-size-large-x
       font-weight: bold
       border-bottom: 1px dashed #ccc
+      margin-top: 20px
       margin-bottom: 20px
 
     .button, .input
